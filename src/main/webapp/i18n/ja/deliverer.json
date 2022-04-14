@@ -1,0 +1,32 @@
+{
+  "coopCycleApp": {
+    "deliverer": {
+      "home": {
+        "title": "Deliverers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Deliverer を追加",
+        "createOrEditLabel": "Delivererを追加または編集",
+        "notFound": "No Deliverers found"
+      },
+      "created": "A new Deliverer is created with identifier {{ param }}",
+      "updated": "A Deliverer is updated with identifier {{ param }}",
+      "deleted": "A Deliverer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Deliverer {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Deliverer"
+      },
+      "id": "ID",
+      "idDelivrer": "Id Delivrer",
+      "idCooperative": "Id Cooperative",
+      "name": "Name",
+      "surname": "Surname",
+      "telephone": "Telephone",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "order": "Order",
+      "cooperative": "Cooperative"
+    }
+  }
+}

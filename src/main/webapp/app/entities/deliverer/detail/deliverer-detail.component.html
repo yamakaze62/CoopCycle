@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="deliverer">
+      <h2 data-cy="delivererDetailsHeading"><span jhiTranslate="coopCycleApp.deliverer.detail.title">Deliverer</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ deliverer.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.idDelivrer">Id Delivrer</span></dt>
+        <dd>
+          <span>{{ deliverer.idDelivrer }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.idCooperative">Id Cooperative</span></dt>
+        <dd>
+          <span>{{ deliverer.idCooperative }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.name">Name</span></dt>
+        <dd>
+          <span>{{ deliverer.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.surname">Surname</span></dt>
+        <dd>
+          <span>{{ deliverer.surname }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.telephone">Telephone</span></dt>
+        <dd>
+          <span>{{ deliverer.telephone }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.latitude">Latitude</span></dt>
+        <dd>
+          <span>{{ deliverer.latitude }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.longitude">Longitude</span></dt>
+        <dd>
+          <span>{{ deliverer.longitude }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.deliverer.cooperative">Cooperative</span></dt>
+        <dd>
+          <div *ngIf="deliverer.cooperative">
+            <a [routerLink]="['/cooperative', deliverer.cooperative?.id, 'view']">{{ deliverer.cooperative?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/deliverer', deliverer.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

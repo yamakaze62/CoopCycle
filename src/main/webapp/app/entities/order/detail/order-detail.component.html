@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="order">
+      <h2 data-cy="orderDetailsHeading"><span jhiTranslate="coopCycleApp.order.detail.title">Order</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ order.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.idOrder">Id Order</span></dt>
+        <dd>
+          <span>{{ order.idOrder }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.idRestaurant">Id Restaurant</span></dt>
+        <dd>
+          <span>{{ order.idRestaurant }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.idCustomer">Id Customer</span></dt>
+        <dd>
+          <span>{{ order.idCustomer }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.state">State</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'coopCycleApp.State.' + order.state }}">{{ order.state }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.totalprice">Totalprice</span></dt>
+        <dd>
+          <span>{{ order.totalprice }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.date">Date</span></dt>
+        <dd>
+          <span>{{ order.date | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.deliverer">Deliverer</span></dt>
+        <dd>
+          <div *ngIf="order.deliverer">
+            <a [routerLink]="['/deliverer', order.deliverer?.id, 'view']">{{ order.deliverer?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.customer">Customer</span></dt>
+        <dd>
+          <div *ngIf="order.customer">
+            <a [routerLink]="['/customer', order.customer?.id, 'view']">{{ order.customer?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="coopCycleApp.order.restaurant">Restaurant</span></dt>
+        <dd>
+          <div *ngIf="order.restaurant">
+            <a [routerLink]="['/restaurant', order.restaurant?.id, 'view']">{{ order.restaurant?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/order', order.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

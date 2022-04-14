@@ -1,0 +1,29 @@
+{
+  "coopCycleApp": {
+    "orderContent": {
+      "home": {
+        "title": "OrderContents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Order Content を追加",
+        "createOrEditLabel": "Order Contentを追加または編集",
+        "notFound": "No Order Contents found"
+      },
+      "created": "A new Order Content is created with identifier {{ param }}",
+      "updated": "A Order Content is updated with identifier {{ param }}",
+      "deleted": "A Order Content is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Order Content {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Order Content"
+      },
+      "id": "ID",
+      "idProduct": "Id Product",
+      "idOrder": "Id Order",
+      "quantityAsked": "Quantity Asked",
+      "productAvailable": "Product Available",
+      "product": "Product",
+      "order": "Order"
+    }
+  }
+}

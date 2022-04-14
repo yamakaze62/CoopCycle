@@ -1,0 +1,13 @@
+{
+  "coopCycleApp": {
+    "State": {
+      "null": "",
+      "WAITINGRESTAURANTCONFIRM": "WAITINGRESTAURANTCONFIRM",
+      "PREPARING": "PREPARING",
+      "WAITINGDELIVERERACCEPT": "WAITINGDELIVERERACCEPT",
+      "PICKEDUP": "PICKEDUP",
+      "ONTHEWAY": "ONTHEWAY",
+      "DELIVERED": "DELIVERED"
+    }
+  }
+}

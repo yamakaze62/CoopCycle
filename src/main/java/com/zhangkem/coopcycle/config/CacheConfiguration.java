@@ -48,6 +48,21 @@ public class CacheConfiguration {
             createCache(cm, com.zhangkem.coopcycle.domain.User.class.getName());
             createCache(cm, com.zhangkem.coopcycle.domain.Authority.class.getName());
             createCache(cm, com.zhangkem.coopcycle.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.zhangkem.coopcycle.domain.Cooperative.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Cooperative.class.getName() + ".deliverers");
+            createCache(cm, com.zhangkem.coopcycle.domain.Deliverer.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Deliverer.class.getName() + ".orders");
+            createCache(cm, com.zhangkem.coopcycle.domain.Restaurant.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Restaurant.class.getName() + ".orders");
+            createCache(cm, com.zhangkem.coopcycle.domain.Restaurant.class.getName() + ".products");
+            createCache(cm, com.zhangkem.coopcycle.domain.Customer.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Customer.class.getName() + ".orders");
+            createCache(cm, com.zhangkem.coopcycle.domain.Product.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Product.class.getName() + ".ordercontents");
+            createCache(cm, com.zhangkem.coopcycle.domain.Order.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.Order.class.getName() + ".orderContents");
+            createCache(cm, com.zhangkem.coopcycle.domain.OrderContent.class.getName());
+            createCache(cm, com.zhangkem.coopcycle.domain.OrderContent.class.getName() + ".products");
             // jhipster-needle-ehcache-add-entry
         };
     }

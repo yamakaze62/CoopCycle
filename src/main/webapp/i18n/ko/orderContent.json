@@ -1,0 +1,29 @@
+{
+  "coopCycleApp": {
+    "orderContent": {
+      "home": {
+        "title": "Order Contents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Content",
+        "createOrEditLabel": "Create or edit a Order Content",
+        "notFound": "No Order Contents found"
+      },
+      "created": "A new Order Content is created with identifier {{ param }}",
+      "updated": "A Order Content is updated with identifier {{ param }}",
+      "deleted": "A Order Content is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Content {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Content"
+      },
+      "id": "ID",
+      "idProduct": "Id Product",
+      "idOrder": "Id Order",
+      "quantityAsked": "Quantity Asked",
+      "productAvailable": "Product Available",
+      "product": "Product",
+      "order": "Order"
+    }
+  }
+}

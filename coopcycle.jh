@@ -1,0 +1,79 @@
+entity Cooperative {
+    idCooperative Integer required
+    name String
+}
+
+entity Deliverer {
+    idDelivrer Integer required
+    idCooperative Integer
+    name String
+    surname String
+    telephone String minlength(10) maxlength(10) required
+    latitude Float required
+    longitude Float required
+}
+
+entity Restaurant {
+    idRestaurant Integer required
+    name String
+    address String required
+    telephone String minlength(10) maxlength(10) required
+}
+
+entity Customer {
+    idCustomer Integer required
+    name String
+    surname String
+    address String required
+    telephone String minlength(10) maxlength(10) required
+}
+
+entity Product {
+    idProduct Integer required
+    idRestaurant Integer required
+    name String
+    price Float
+    disponibility Integer min(0)
+}
+
+entity Order {
+    idOrder Integer required
+    idRestaurant Integer required
+    idCustomer Integer required
+    state State
+    totalprice Float min(5) max(200)  
+    date ZonedDateTime
+}
+
+entity OrderContent {
+    idProduct Integer required
+    idOrder Integer required
+    quantityAsked Integer
+    productAvailable Boolean
+}
+
+enum State {
+    WAITINGRESTAURANTCONFIRM,
+    PREPARING,
+    WAITINGDELIVERERACCEPT,
+    PICKEDUP,
+    ONTHEWAY,
+    DELIVERED
+}
+
+relationship ManyToMany {
+    OrderContent{product required} to Product{ordercontent}
+}
+
+relationship OneToMany {
+    Deliverer to Order
+    Customer to Order
+    Cooperative to Deliverer
+    Restaurant{order} to Order{restaurant}
+    Restaurant{product} to Product{restaurant}
+    Order to OrderContent
+}
+
+
+
+dto * with mapstruct
